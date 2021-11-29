@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/main.css/header.css"/>
+
+</head>
+<body>
+
+<div class="header">
+    <h1 class="logo">COMPIFY</h1>
+  <div class="header-right">
+    <a href="{{ url_for('homepage') }}">HOME</a>
+    <a href="{{ url_for('faq') }}">FAQ</a>
+    <a href="{{ url_for('shop') }}">SHOPS</a>
+    <a href="{{ url_for('feedback') }}">FEEDBACK</a>
+    <a href="{{ url_for('user') }}">USERS</a>
+  </div>
+</div>
+<br>
+<h1 style="padding-left: 650px;">TASK</h1>
+<br>
+<br>
+<br>
+<div class="tasktable">
+<form action="{{url_for("task")}}
+"  method="post" >
+    <label for="canNotify">canNotify:</label><br><br>
+    <label for="true">true:</label><br>
+    <input type="radio" id="canNotify" name="canNotify" value="true" ><br>
+    <label for="false">false:</label><br>
+    <input type="radio" id="canNotify" name="canNotify" value="false"><br><br>
+
+    <label for="createdOn">createdOn:</label>
+    <input type="datetime-local" id="createdOn" name="createdOn" required><br><br>
+    <label for="description">description:</label>
+    <input type="text" id="description" name="description" required><br><br>
+    <label for="displayPicUrl">displayPicUrl:</label>
+    <input type="text" id="displayPicUrl" name="displayPicUrl" required><br><br>
+    <label for="isActive">isActive:</label><br><br>
+    <label for="true">true:</label><br>
+    <input type="radio" id="isActive" name="isActive" value="true" ><br>
+    <label for="false">false:</label><br>
+    <input type="radio" id="isActive" name="isActive" value="false" ><br><br>
+    <label for="maxRc">maxRc:</label>
+    <input type="number" id="maxRc" name="maxRc" required><br><br>
+    <label for="minRc">minRc:</label>
+    <input type="number" id="minRc" name="minRc" required><br><br>
+    <label for="name">name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="time">time:</label>
+    <input type="number" id="time" name="time" required><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+</body>
+</html>

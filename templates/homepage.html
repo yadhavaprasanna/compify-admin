@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* Float four columns side by side */
+    .column {
+      float: left;
+      
+      
+      
+      padding-left: 70px;
+    
+      
+    
+    }
+    
+    /* Remove extra left and right margins, due to padding */
+    .row {
+        margin-left: 160px;
+        margin-bottom: 80px;
+        margin-top: 80px;
+       
+        
+    }
+    .card{
+        height: 160px;
+        width: 300px;
+        color: black;
+        background-color: #76ff76;
+        
+    }
+    .card h3{
+        padding-top: 30px;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive columns */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+    
+    /* Style the counter cards */
+    .card {
+      
+      padding: 16px;
+      text-align: center;
+      background-color: #76ff76;
+      border-radius: 20px;
+    }
+    </style>
+<link rel="stylesheet" href="static/main.css/header.css"/>
+</head>
+<body>
+
+<div class="header">
+    <h1 class="logo">COMPIFY</h1>
+    
+</div>
+
+
+
+</head>
+<body>
+
+
+
+<div class="row">
+  <a href="{{ url_for('user') }}">
+  <div class="column">
+    <div class="card">
+      <h3>USERS</h3>
+      
+    </div>
+  </div></a>
+  <a href="{{ url_for('feedback') }}">
+  <div class="column">
+    <div class="card">
+      <h3>FEEDBACK</h3>
+     
+    </div>
+  </div>
+  <a href="{{ url_for('faq') }}">
+  <div class="column">
+    <div class="card">
+      <h3>FAQ</h3>
+     
+    </div>
+  </div>
+</a>
+  
+  
+</div>
+
+<div class="row">
+  <a href="{{ url_for('task') }}">
+    <div class="column">
+        <div class="card">
+          <h3>TASK</h3>
+         
+        </div>
+      </div>
+    </a>
+    <a href="{{ url_for('shop') }}">
+      <div class="column">
+        <div class="card">
+          <h3>SHOPS</h3>
+          
+        </div>
+      </div>
+    </a>
+      <a href="user.html">
+      <div class="column">
+        <div class="card">
+          <h3>Card 4</h3>
+          
+        </div>
+      </div>
+    </a>
+</div>
+
+
+</body>
+</html>
