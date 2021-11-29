@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/main.css/header.css"/>
+</head>
+<body>
+
+<div class="header">
+  
+    <h1 class="logo">COMPIFY</h1>
+  <div class="header-right">
+    <a href="{{ url_for('homepage') }}">HOME</a>
+    <a href="{{ url_for('task') }}">TASK</a>
+    <a href="{{ url_for('shop') }}">SHOPS</a>
+    <a href="{{ url_for('feedback') }}">FEEDBACK</a>
+    <a href="{{ url_for('user') }}">USERS</a>
+    
+  </div>
+</div>
+<br>
+<h1 style="padding-left: 650px;">FAQ</h1>
+<br>
+<br>
+<br>
+<div class="tasktable">
+  <form action="{{url_for("faq")}}
+  "  method="post" >
+        <label for="answer">answer:</label>
+        <input type="text" id="answer" name="answer" required><br><br>
+
+        <label for="order">order:</label>
+        <input type="number" id="order" name="order" required><br><br>
+
+        <label for="question">question:</label>
+        <input type="text" id="question" name="question" required><br><br>
+
+        <label for="url">url:</label>
+        <input type="text" id="url" name="url" required><br><br>
+        
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>
